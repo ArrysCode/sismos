@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      FILTERS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 3</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-searchbar [(ngModel)]="filterValue" (ngModelChange)="filterData()" class="my-custom-searchbar"></ion-searchbar>
+
+<ion-card class="my-custom-card" *ngFor="let item of filteredData">
+  <ion-card-header>
+    <ion-badge color="primary" class="badge-floating">{{ item.magnitude.value }}</ion-badge>
+    <ion-card-title>Lugar: {{ item.geo_reference }}</ion-card-title>
+    <ion-card-subtitle>ID:{{ item.id }}</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    Fecha: {{ item.utc_date }}
+    <p>Profundidad: {{ item.depth }}</p> 
+    <p>Latitud: {{ item.latitude }}</p>
+    <p>Longitud: {{ item.longitude }}</p>
+    <p>Magnitud: {{ item.magnitude.value }}</p>
+  </ion-card-content>
+</ion-card>
+
+
+
+
+
+
+
+
+
+
+
+</ion-content>

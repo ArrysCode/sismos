@@ -1,0 +1,33 @@
+
+.my-custom-card {
+  background-color: #1A1B26;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.my-custom-card ion-card-header {
+  background-color: #16161E;
+  color: #fff;
+}
+
+.my-custom-card ion-card-header ion-card-subtitle {
+  font-size: 14px;
+}
+
+.my-custom-card ion-card-content {
+  padding: 10px;
+}
+
+.badge-floating {
+  float: right;
+  margin-right: 10px;
+  
+  --color: #fff;
+  --font-size: 1.25rem;
+  --padding-top: 4px;
+  --padding-bottom: 4px;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --border-radius: 20px;
+}

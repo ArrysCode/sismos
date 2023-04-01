@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      ALL DATA
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card class="my-custom-card" *ngFor="let item of filteredData">
+    <ion-card-header>
+      <ion-badge class="badge-floating">{{ item.magnitude.value }}</ion-badge>
+      <ion-card-title>Lugar: {{ item.geo_reference }}</ion-card-title>
+      <ion-card-subtitle>ID:{{ item.id }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Fecha: {{ item.utc_date | date:'shortDate' }}
+      <p>Profundidad: {{ item.depth }}</p> 
+      <p>Latitud: {{ item.latitude }}</p>
+      <p>Longitud: {{ item.longitude }}</p>
+      <p>Magnitud: {{ item.magnitude.value }}</p>
+    </ion-card-content>
+  </ion-card>
+
+
+  
+</ion-content>

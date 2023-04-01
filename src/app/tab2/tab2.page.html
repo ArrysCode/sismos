@@ -1,0 +1,95 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      RECENT DATA
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 2</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-card class="my-custom-card" *ngIf="data">
+    <ion-card-header>
+      <ion-badge color="primary" class="badge-floating">{{ data.events[0].magnitude.value }}</ion-badge>
+      <ion-card-title>Lugar: {{ data.events[0].geo_reference }}</ion-card-title>
+      <ion-card-subtitle>ID:{{ data.events[0].id }}</ion-card-subtitle>
+      
+    </ion-card-header>
+    <ion-card-content>
+      Fecha: {{ data.events[0].utc_date | date:'shortDate' }}
+      <p>Profundidad: {{ data.events[0].depth }}</p> 
+      <p>Latitud: {{ data.events[0].latitude }}</p>
+      <p>Longitud: {{ data.events[0].longitude }}</p>
+      <p>Magnitud: {{ data.events[0].magnitude.value }}</p>
+    </ion-card-content>
+    
+  </ion-card>
+
+  <ion-card class="my-custom-card" *ngIf="data">
+    <ion-card-header>
+      <ion-badge color="primary" class="badge-floating">{{ data.events[1].magnitude.value }}</ion-badge>
+      <ion-card-title>Lugar: {{ data.events[1].geo_reference }}</ion-card-title>
+      <ion-card-subtitle>ID:{{ data.events[1].id }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Fecha: {{ data.events[1].utc_date | date:'shortDate' }}
+      <p>Profundidad: {{ data.events[1].depth }}</p> 
+      <p>Latitud: {{ data.events[1].latitude }}</p>
+      <p>Longitud: {{ data.events[1].longitude }}</p>
+      <p>Magnitud: {{ data.events[1].magnitude.value }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="my-custom-card" *ngIf="data">
+    <ion-card-header>
+      <ion-badge color="primary" class="badge-floating">{{ data.events[2].magnitude.value }}</ion-badge>
+      <ion-card-title>Lugar: {{ data.events[2].geo_reference }}</ion-card-title>
+      <ion-card-subtitle>ID:{{ data.events[2].id }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Fecha: {{ data.events[2].utc_date | date:'shortDate' }}
+      <p>Profundidad: {{ data.events[2].depth }}</p> 
+      <p>Latitud: {{ data.events[2].latitude }}</p>
+      <p>Longitud: {{ data.events[2].longitude }}</p>
+      <p>Magnitud: {{ data.events[2].magnitude.value }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="my-custom-card" *ngIf="data">
+    <ion-card-header>
+      <ion-badge color="primary" class="badge-floating">{{ data.events[3].magnitude.value }}</ion-badge>
+      <ion-card-title>Lugar: {{ data.events[3].geo_reference }}</ion-card-title>
+      <ion-card-subtitle>ID:{{ data.events[3].id }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Fecha: {{ data.events[3].utc_date | date:'shortDate' }}
+      <p>Profundidad: {{ data.events[3].depth }}</p> 
+      <p>Latitud: {{ data.events[3].latitude }}</p>
+      <p>Longitud: {{ data.events[3].longitude }}</p>
+      <p>Magnitud: {{ data.events[3].magnitude.value }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="my-custom-card" *ngIf="data">
+    <ion-card-header>
+      <ion-badge color="primary" class="badge-floating">{{ data.events[4].magnitude.value }}</ion-badge>
+      <ion-card-title>Lugar: {{ data.events[4].geo_reference }}</ion-card-title>
+      <ion-card-subtitle>ID:{{ data.events[4].id }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Fecha: {{ data.events[4].utc_date | date:'shortDate' }}
+      <p>Profundidad: {{ data.events[4].depth }}</p> 
+      <p>Latitud: {{ data.events[4].latitude }}</p>
+      <p>Longitud: {{ data.events[4].longitude }}</p>
+      <p>Magnitud: {{ data.events[4].magnitude.value }}</p>
+    </ion-card-content>
+  </ion-card>
+
+        
+</ion-content>
